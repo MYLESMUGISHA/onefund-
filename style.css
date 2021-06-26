@@ -294,7 +294,15 @@ color:#fff;
   @media only screen and (max-width: 1200px) {
     
     #form{
-        margin-left: 350px;
+        margin-left: 380px;
     
     }
+    #about{
+        height: 70%;
+    }
+    ul, li{
+        margin-right: 30px;
+        font-size: 25px;
+    }
+
   }
