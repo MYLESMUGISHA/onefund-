@@ -291,10 +291,10 @@ color:#fff;
 
 
 
-  @media only screen and (max-width: 1800px) {
+  @media only screen and (max-width: 1900px) {
     
     #form{
-        margin-left: 380px;
+        margin-left: 750px;
     
     }
     #about{
