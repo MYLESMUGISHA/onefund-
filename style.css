@@ -4,7 +4,6 @@ html{
 body{
     font-family: 'Barlow Condensed', sans-serif;
     background-color:white;
-/* overflow-x: hidden; */
 }
 * {
     padding: 0;
@@ -12,12 +11,17 @@ body{
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-
 } 
+
+/* Home section  */
 
 #Nbar{
     background-color: teal;
@@ -41,7 +45,6 @@ li a {
     display: block;
     color: #fff;
     padding: 10px;
-    text-decoration:none;
 
 }
 
@@ -62,13 +65,12 @@ li img{
 #home{
     background-image:url(imgs/mavette.jpg);
     background-size: cover;
-    background-position: left center;
+    background-position: top center;
     position: relative;
     z-index: 1;
     width: 100%;
-    height:1300px;
+    height:800px;
     margin-top: 20px;
-    padding-top: 50px;
   
 }
 
@@ -102,7 +104,9 @@ padding: 6px;
  font-size: 11px;
 }
 
+/* End of Home section  */
 
+/* About us section  */
 
 #about{
 display: flex;
@@ -123,9 +127,9 @@ background-color:#fff;
     width: 320px;
     height: 360px;
 }
+
 #desc-div, h1{
     margin-left:20px;
-
 }
 
 #desc-div, h3{
@@ -134,10 +138,10 @@ background-color:#fff;
     margin-top: 20px;
     margin-left:5px;
     text-align:justify;
-    
 }
+/* End of About us section  */
 
-/* Contact form starts from here */
+/* Contact form styles starts from here */
 
 #contact {
  width: 100%;
@@ -145,7 +149,7 @@ background-color:#fff;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-padding: 60px;
+padding: 50px;
 }
 
 #contact, h2{
@@ -178,7 +182,7 @@ input[type=text],textarea {
     background-color: #45a049;
   }
   
-  .container {
+  .form-container {
     border-radius: 5px;
     background-color: teal;
     padding: 20px;
@@ -186,26 +190,11 @@ input[type=text],textarea {
     margin-left: 300px;
   }
 
- /* End contact form  */
+ /* End of contact form  */
 
+/* Footer  section  */
 
-  #tomorrow{
-      color:navajowhite;
-      margin: 20px;
-  }
-  #fund{
-      color:palegreen;
-      margin:auto;
-  }
-  #button{
-      border: 10px;
-      border-radius: 10px;
-      background-color:teal;
-      padding: 6px;
-      width: 80px;
-    
-  }
-#Copyright,p {
+#copyright-details,p {
     font-size: 15px;
     color:#fff;
     margin-left: 10px;
@@ -222,24 +211,23 @@ background-color:#262626;
 margin-top:-20px;
 margin-bottom: -15px;
 padding:30px;
-
-
 }
-#Details{
 
+#contact-details{
 color:#fff;
 font-size:15px;
-
-
 }
-#media{
 
+#social-media{
 color:#fff;
 }
-#media,i{
+
+#social-media,i{
     color:#fff;
     margin-left: 10px;
 }
+
+/* Media query for Small Devices  */
 
  @media only screen and (max-width: 400px) {
     
@@ -278,16 +266,18 @@ color:#fff;
     li a {
        margin-left: -40px;
     }  
-    .container {
+    .form-container {
         width: 100%;
-        margin-left: -40px;
+        margin-left: 5px;
       }
       input[type=submit] {
         margin-left: 0px;
       }
   } 
 
+/* End of Media query for Small Devices  */
 
+/* Media query for Desktop  */
 
   @media only screen and (max-width: 1920px) {
     
@@ -304,20 +294,11 @@ color:#fff;
         margin-top:0px;
     }
 
-    #home{
-        background-image:url(imgs/mavette.jpg);
-        background-size: cover;
-        background-position: left center;
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        height:1300px;
-        margin-top: 20px;
-    }
 
     #contact, h2{
         text-align: center;
         margin-bottom: 20px;
         }
-
   }
+
+  /* End of Media query for Desktop  */
