@@ -26,9 +26,6 @@ img {
 #Nbar{
     background-color: teal;
     margin-bottom: -20px;
-
-
-
 }
 ul{
     background-color:#333;
@@ -146,11 +143,12 @@ background-color:#fff;
 
 #contact {
  width: 100%;
- background-image: url(imgs/contact-bg.jpg);
+ /* background-image: url(imgs/contact-bg.jpg); */
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 padding: 50px;
+margin-top: 500px;
 }
 
 #contact, h2{
@@ -303,3 +301,100 @@ color:#fff;
   }
 
   /* End of Media query for Desktop  */
+
+
+/* Add padding to containers */
+
+.container {
+    padding: 16px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-left: 240px;
+    width: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+/* Full-width input fields */
+
+input[type=text ] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+
+input[ type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+/* Overwrite default styles of hr */
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+/* Set a style for the submit button */
+
+.registerBtn1 {
+    background-color: #000;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 25px;
+}
+
+.registerBtn {
+    background-color: #000;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 25px;
+}
+
+.registerBtn:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+   
+ 

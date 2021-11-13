@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONE FUND PROGRAM</title>
+   
     <link rel="shortcut icon" href="imgs/onefund.jpg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -17,34 +18,54 @@
 
   <div id="Nbar">
     <ul>
+     <button id="signOut" onclick="signOut()">Sign out</button>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li ><a class="active" href="#">Contact us</a></li>
-        <li style="float:left"><img src="/imgs/alight.jpg" alt="logo"></li>
+    
+        <!-- <li style="float:left"><img src="/imgs/alight.jpg" alt="logo"></li> -->
       </ul>
   </div>  
-
-
-
 </section>
 
 <!-- End of home section --> 
+<!-- sign in form -->
 
-<!-- Contact us section --> 
+<div id="form">
+  <div id="EmailSignIn" class="container">
+      <h3>Sign in to continue</h3>
+      <hr><input type="text" placeholder="Enter Email" class="auth" name="email" autocomplete="on" id="email" required>
+      <input type="password" class="auth" placeholder="Enter Password" autocomplete="on" name="psw" id="password" required>
+      <button onclick="signIn()" id="signIn" class="registerBtn1">Sign in
+      </button>
+      <button  id="signUp" class="registerBtn">Sign in with Google
+      </button><button id="forgotBtn"><a href="#">Forgot
+              password?</a></button>
+      
+  </div>
+  
+</div>
+<!-- end of sign in form -->
 
-<section id="contact"> 
+
+ <!-- Contact us section  -->
+
+<section id="contact" style="display: none;"> 
+
     <h2>Contact us</h3>
 
 <div class="form-container">
 
-  <form action="#">
+  <form id="contactForm">
 
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="lname">Email</label>
+    <input type="text" id="user-email" name="lastname" placeholder="Your last name..">
     <label for="subject">Message</label>
+    
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+     <p id="alert-message" style="display: none;">Your Message has been sent ! </p>
     <input type="submit" value="Submit">
 
   </form>
@@ -58,7 +79,7 @@
 <!-- Footer section --> 
 <section>
 
-<footer id="footer">
+<footer id="footer" >
 
     <div id="copyright-details">
        <p>Copyright@myles2021</p> 
@@ -83,9 +104,16 @@
 
 </footer>
 
-</section>
+ </section>
 
-<!-- End of Footer section --> 
+<script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-database.js "></script> 
 
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js "></script>
+
+
+<script src="code.js"></script>
 </body>
 </html>
