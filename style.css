@@ -302,23 +302,22 @@ color:#fff;
 
   /* End of Media query for Desktop  */
 
-
 /* Add padding to containers */
 
 .container {
     padding: 16px;
     background-color: lightgray;
     border-radius: 10px;
-    margin-left: 240px;
-    width: 400px;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    width: 500px;
+    margin-left: 200px;
+    margin-top: 130px;
+    margin-bottom: 130px;
 }
 
 
 /* Full-width input fields */
 
-input[type=text ] {
+input[type=text] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -328,8 +327,7 @@ input[type=text ] {
     border-radius: 10px;
 }
 
-
-input[ type=password] {
+input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -338,6 +336,7 @@ input[ type=password] {
     background: #f1f1f1;
     border-radius: 10px;
 }
+
 input[type=text]:focus {
     background-color: #ddd;
     outline: none;
@@ -388,13 +387,65 @@ hr {
 }
 
 
+/* Add a blue text color to links */
 
+a {
+    color: teal;
+}
 
+#forgot {
+    background-color: teal;
+    width: 400px;
+    display: none;
+    margin-left: 70px;
+    margin-bottom: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 150px;
+    
+}
 
+#reset-message {
+   color: whitesmoke;
+   font-weight: 500;
+   font-size: 20px;
+   margin-bottom: 20px;
+}
 
+#errorMessage {
+    color: red;
+    text-align: center;
+}
 
+#resetError {
+    color: red;
+    text-align: center;
+}
 
+#resetMessage {
+    color: teal;
+    text-align: center;
+    font-size: 30px;
+    margin: 80px;
+}
 
+#signOut {
 
-   
- 
+    background-color: yellowgreen;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+#forgetPassword{
+    background-color: turquoise;
+    text-decoration: underline;
+    color: white;
+    padding: 8px 7px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 25px;
+
+}

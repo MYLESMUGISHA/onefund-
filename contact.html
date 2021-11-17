@@ -29,46 +29,52 @@
 </section>
 
 <!-- End of home section --> 
-<!-- sign in form -->
 
+<!-- sign in form -->
 <div id="form">
   <div id="EmailSignIn" class="container">
-      <h3>Sign in to continue</h3>
-      <hr><input type="text" placeholder="Enter Email" class="auth" name="email" autocomplete="on" id="email" required>
-      <input type="password" class="auth" placeholder="Enter Password" autocomplete="on" name="psw" id="password" required>
-      <button onclick="signIn()" id="signIn" class="registerBtn1">Sign in
-      </button>
-      <button  id="signUp" class="registerBtn">Sign in with Google
-      </button><button id="forgotBtn"><a href="#">Forgot
-              password?</a></button>
-      
-  </div>
-  
+    <h3>Sign in to continue</h3>
+    <hr><input type="text" placeholder="Enter Email" class="auth" name="email" autocomplete="off" id="email" required><input type="password" class="auth" placeholder="Enter Password" autocomplete="off" name="psw" id="password" required>
+    <button onclick="signIn()" id="signIn" class="registerBtn1">Sign in
+    </button>
+    <!-- <button onclick="googleSignIn()" id="signUp" class="registerBtn">Sign in with Google -->
+    </button><button onclick="showEmail()" id="forgotBtn"><a href="#">Forgot
+            password?</a></button>
+    <p id="errorMessage"></p>
 </div>
+
+  <form id="forgot">
+    <p id="reset-message">Please enter your e-mail and click submit to receive an e-mail with instructions to reset your password </p>
+    <input type="text" class="auth" placeholder="Enter your e-mail" autocomplete="off" name="psw" id="forgot-password-email"
+        required><button id="signIn" class="registerBtn1">Submit</button>
+    <p id="resetError"></p>
+  </form>
+  
+  <h2 id="resetMessage"></h2>
 <!-- end of sign in form -->
 
 
  <!-- Contact us section  -->
 
-<section id="contact" style="display: none;"> 
+ <section id="contact" style="display: none;"> 
 
-    <h2>Contact us</h3>
+  <h2>Contact us</h3>
 
 <div class="form-container">
 
-  <form id="contactForm">
+<form id="contactForm">
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    <label for="lname">Email</label>
-    <input type="text" id="user-email" name="lastname" placeholder="Your last name..">
-    <label for="subject">Message</label>
-    
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-     <p id="alert-message" style="display: none;">Your Message has been sent ! </p>
-    <input type="submit" value="Submit">
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  <label for="lname">Email</label>
+  <input type="text" id="user-email" name="lastname" placeholder="Your last name..">
+  <label for="subject">Message</label>
+  
+  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+   <p id="alert-message" style="display: none;">Your Message has been sent ! </p>
+  <input type="submit" value="Submit">
 
-  </form>
+</form>
 
 </div>
 
@@ -112,7 +118,6 @@
 
 <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js "></script>
-
 
 <script src="code.js"></script>
 </body>

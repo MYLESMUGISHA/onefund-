@@ -35,9 +35,9 @@ function submitForm(e) {
     e.preventDefault();
 
     // Get values
-    var name = getInputVal("fname");
+ var name = getInputVal("fname");
     var email = getInputVal("user-email");
-    var message = getInputVal("subject");
+    var message = getInputVal("subject");   
 
     // Save message
     saveMessage(name, email, message);
@@ -83,6 +83,9 @@ const contactSection= document.getElementById("contact");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const signInForm = document.getElementById("form");
+const errorAlert = document.getElementById("errorMessage");
+const resetMessage = document.getElementById("resetMessage");
+const forgetPasswordForm = document.getElementById("forgot");
 
 
 const auth = firebase.auth();
@@ -92,22 +95,21 @@ function signIn() {
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(
         (e) =>
-        (document.getElementById("errorMessage").innerHTML =
-            "Wrong Password or Email !")
+        (
+            
+            errorAlert.innerHTML = "Wrong Password or Email !") 
     );
 }
 
+// function for signing out 
+
 function signOut() {
-
     auth.signOut();
-
-    signInForm.style.display = "block";
-    
     contactSection.style.display = "none";
+    signInForm.style.display = "block";
+    // window.location.href = 'index.html';
 
 }
-
-
 
 auth.onAuthStateChanged((user) => {
 
@@ -116,15 +118,80 @@ auth.onAuthStateChanged((user) => {
         // Everything inside here happens if user is signed in
 
         signInForm.style.display = "none";
-  
         contactSection.style.display = "block";
-        
-       
+        // myNavBar.style.display = "block";
 
     } else {
+
         // Everything inside here happens if user is not signed in
         console.log("not signed in");
     }
 });
+
+
+// sign up functionality 
+
+// function signUp(){
+
+//     const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+//     promise.catch(error => {
+//         alert(error.message);
+        
+//     })
+// }
+
+// sign in with Google 
+
+// initiate a provider
+
+// let provider = new firebase.auth.GoogleAuthProvider(); 
+
+// function for signing in with google 
+
+// function googleSignIn(){
+
+//     firebase.auth().signInWithPopup(provider).then(result =>{
+
+//       alert('You havae successfully logged in with google')
+
+//     }).catch(error => console.log(error.message)
+//     )
+// }
+
+// forget password functionality 
+
+// displaying the reset password form
+
+// function showEmailForm(){
+//     signInForm.style.display = "none";
+//     forgetPasswordForm.style.display = "block";
+// }
+
+// forget password form submit event 
+
+// forgetPasswordForm.addEventListener('submit', function(e){
+
+//     e.preventDefault()
+//     //glab value from the form
+    
+//     let emailAdress = document.getElementById("forgot-password-email").value;
+    
+//     //send value to firebase
+    
+//     firebase.auth().sendPasswordResetEmail(emailAdress).then(() => {
+    
+//     // what we need todo here
+//     forgetPasswordForm.style.display = "none";
+//     resetMessage.innerHTML = "Please Check your inbox or your spam folder to reset your password !"
+    
+    
+//     }).catch(error => {
+    
+//         errorAlert.innerHTML = " Please make your email properly !"
+    
+//         console.log(error);
+//     })
+    
+//     })
 
 
