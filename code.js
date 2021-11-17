@@ -131,67 +131,67 @@ auth.onAuthStateChanged((user) => {
 
 // sign up functionality 
 
-// function signUp(){
+function signUp(){
 
-//     const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-//     promise.catch(error => {
-//         alert(error.message);
+    const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+    promise.catch(error => {
+        alert(error.message);
         
-//     })
-// }
+    })
+}
 
 // sign in with Google 
 
 // initiate a provider
 
-// let provider = new firebase.auth.GoogleAuthProvider(); 
+ let provider = new firebase.auth.GoogleAuthProvider(); 
 
 // function for signing in with google 
 
-// function googleSignIn(){
+function googleSignIn(){
 
-//     firebase.auth().signInWithPopup(provider).then(result =>{
+    firebase.auth().signInWithPopup(provider).then(result =>{
 
-//       alert('You havae successfully logged in with google')
+      alert('You havae successfully logged in with google')
 
-//     }).catch(error => console.log(error.message)
-//     )
-// }
+    }).catch(error => console.log(error.message)
+    )
+}
 
 // forget password functionality 
 
 // displaying the reset password form
 
-// function showEmailForm(){
-//     signInForm.style.display = "none";
-//     forgetPasswordForm.style.display = "block";
-// }
+function showEmailForm(){
+    signInForm.style.display = "none";
+    forgetPasswordForm.style.display = "block";
+}
 
 // forget password form submit event 
 
-// forgetPasswordForm.addEventListener('submit', function(e){
+forgetPasswordForm.addEventListener('submit', function(e){
 
-//     e.preventDefault()
-//     //glab value from the form
+    e.preventDefault()
+    //glab value from the form
     
-//     let emailAdress = document.getElementById("forgot-password-email").value;
+    let emailAdress = document.getElementById("forgot-password-email").value;
     
-//     //send value to firebase
+    //send value to firebase
     
-//     firebase.auth().sendPasswordResetEmail(emailAdress).then(() => {
+    firebase.auth().sendPasswordResetEmail(emailAdress).then(() => {
     
-//     // what we need todo here
-//     forgetPasswordForm.style.display = "none";
-//     resetMessage.innerHTML = "Please Check your inbox or your spam folder to reset your password !"
+    // what we need todo here
+    forgetPasswordForm.style.display = "none";
+    resetMessage.innerHTML = "Please Check your inbox or your spam folder to reset your password !"
     
     
-//     }).catch(error => {
+    }).catch(error => {
     
-//         errorAlert.innerHTML = " Please make your email properly !"
+        errorAlert.innerHTML = "Please make your email properly !"
     
-//         console.log(error);
-//     })
+        console.log(error);
+    })
     
-//     })
+    })
 
 
