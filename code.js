@@ -86,6 +86,7 @@ const signInForm = document.getElementById("form");
 const errorAlert = document.getElementById("errorMessage");
 const resetMessage = document.getElementById("resetMessage");
 const forgetPasswordForm = document.getElementById("forgot");
+let signOutBtn = document.getElementById("signOut");
 
 
 const auth = firebase.auth();
@@ -100,6 +101,27 @@ function signIn() {
             errorAlert.innerHTML = "Wrong Password or Email !") 
     );
 }
+
+// function to clear the log in when the page loads
+
+
+// window.addEventListener("onload", clearForm);
+
+//  function clearForm(){
+   
+//     document.getElementById("form").reset();
+//     signInForm.reset();
+//     document.getElementById("email").value = " ";
+  
+//   };
+
+
+
+// function clearForm(){
+//     document.getElementById("email").value = " ";
+
+// }
+
 
 // function for signing out 
 
@@ -119,8 +141,7 @@ auth.onAuthStateChanged((user) => {
 
         signInForm.style.display = "none";
         contactSection.style.display = "block";
-        // myNavBar.style.display = "block";
-
+        signOutBtn.style.display = "block";
     } else {
 
         // Everything inside here happens if user is not signed in
@@ -165,6 +186,7 @@ function googleSignIn(){
 function showEmailForm(){
     signInForm.style.display = "none";
     forgetPasswordForm.style.display = "block";
+    signOutBtn.style.display = "none";
 }
 
 // forget password form submit event 

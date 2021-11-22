@@ -18,12 +18,12 @@
 
   <div id="Nbar">
     <ul>
-     <button id="signOut" onclick="signOut()">Sign out</button>
+     <button id="signOut" style="display: none;" onclick="signOut()">Sign out</button>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li ><a class="active" href="#">Contact us</a></li>
     
-        <!-- <li style="float:left"><img src="/imgs/alight.jpg" alt="logo"></li> -->
+        <li style="float:left"><img src="imgs/alight.jpg" alt="logo"></li>
       </ul>
   </div>  
 </section>
@@ -34,7 +34,8 @@
 <div id="form">
   <div id="EmailSignIn" class="container">
       <h3>Sign in to continue</h3>
-      <hr><input type="text" placeholder="Enter Email" class="auth" name="email" autocomplete="off" id="email" required><input type="password" class="auth" placeholder="Enter Password" autocomplete="off" name="psw" id="password" required>
+      <hr><input type="text" placeholder="Enter Email" class="auth" name="email" autocomplete="off" id="email" required>
+      <input type="password" class="auth" placeholder="Enter Password" autocomplete="off" name="psw" id="password" required>
       <button onclick="signIn()" id="signIn" class="registerBtn1">Sign in
       </button>
       <button onclick="signUp()" id="signUp" class="registerBtn1">Sign Up
@@ -42,20 +43,22 @@
 
       <button onclick="googleSignIn()" id="googleSignIn" class="registerBtn1">Sign in With Google
       </button>
-      <button  onclick="showEmailForm()" id="forgetPassword" > Forget Password
+      <button  id="forgetPassword" onclick="showEmailForm()"> Forget Password
       </button>
-      
+      <!-- onclick="showEmailForm()" -->
       <p id="errorMessage"></p>
   </div>
 </div>
-  <form id="forgot">
-    <p id="reset-message">Please enter your e-mail and click submit to receive an e-mail with instructions to reset your password </p>
-    <input type="text" class="auth" placeholder="Enter your e-mail" autocomplete="off" name="psw" id="forgot-password-email"
-        required><button id="signIn" class="registerBtn1">Submit</button>
-    <p id="resetError"></p>
-  </form>
-  
-  <h2 id="resetMessage"></h2>
+
+<form id="forgot">
+  <p id="reset-message">Please enter your e-mail and click submit to receive an e-mail with instructions to reset your password </p>
+  <input type="text" class="auth" placeholder="Enter your e-mail" autocomplete="off" name="psw" id="forgot-password-email"
+      required><button id="signIn" class="registerBtn1">Submit</button>
+  <p id="resetError"></p>
+</form>
+
+<h2 id="resetMessage"></h2>
+ 
 <!-- end of sign in form -->
 
 
