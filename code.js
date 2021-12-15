@@ -217,3 +217,13 @@ forgetPasswordForm.addEventListener('submit', function(e){
     })
 
 
+
+    //  
+
+    // 1. create a branch  (git branch branchName )
+    // 2. rename a branch (git branch -m oldName newName)
+    // 3. delete a branch (git branch -d branchName)
+    // 4. moving from one branch to another (git checkout branchName ) 
+    // 6. pushing a branch
+    // 7. merge a branch 
+    // 5. check branches list
